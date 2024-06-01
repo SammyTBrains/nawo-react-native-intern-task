@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, Image } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 import { GlobalStyles } from "../../constants/styles";
 import { UserDummySVG } from "../svgs";
 
