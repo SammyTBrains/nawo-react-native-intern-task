@@ -1,8 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { RootNavParamList } from "./type-utilities/type";
 import { GlobalStyles } from "./constants/styles";
@@ -15,13 +15,15 @@ const BottomTabs = createBottomTabNavigator<RootNavParamList>();
 
 export default function App() {
   return (
-    <>
+    <SafeAreaProvider>
       <StatusBar style="light" />
       <NavigationContainer>
         <BottomTabs.Navigator
           screenOptions={{
             headerShown: false,
-            tabBarStyle: { backgroundColor: GlobalStyles.colors.primary500 },
+            tabBarStyle: {
+              backgroundColor: GlobalStyles.colors.primary,
+            },
             tabBarShowLabel: false,
             tabBarActiveTintColor: "white",
             tabBarInactiveTintColor: "white",
@@ -81,6 +83,6 @@ export default function App() {
           />
         </BottomTabs.Navigator>
       </NavigationContainer>
-    </>
+    </SafeAreaProvider>
   );
 }
