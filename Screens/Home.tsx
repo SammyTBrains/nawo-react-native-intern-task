@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 import HomeHeader from "../components/Home/HomeHeader";
 import UserInfoSummary from "../components/Home/UserInfoSummary";
-import { TransactionLinkLogo } from "../components/svgs";
+import { ArrowSVG, TransactionLinkLogo } from "../components/svgs";
 
 const Home = () => {
   return (
@@ -16,10 +16,6 @@ const Home = () => {
         <View style={styles.transactionSortLink}>
           <View style={{ flexDirection: "row", gap: 16, alignItems: "center" }}>
             <View style={styles.transacLinkImageContainer}>
-              {/* <Image
-                source={require("../assets/images/tabler_discount.png")}
-                style={{ width: 22, height: 22 }}
-              /> */}
               <TransactionLinkLogo />
             </View>
             <View
@@ -38,6 +34,18 @@ const Home = () => {
                 Get points for sorting your transactions
               </Text>
             </View>
+          </View>
+          <View
+            style={{
+              width: 30,
+              height: 30,
+              borderRadius: 30,
+              backgroundColor: "#2310B2",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <ArrowSVG />
           </View>
         </View>
       </ScrollView>
@@ -60,6 +68,7 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between",
   },
   transacLinkImageContainer: {
     width: 40,
