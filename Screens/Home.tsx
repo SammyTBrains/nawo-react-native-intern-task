@@ -1,7 +1,6 @@
 import { Text, StyleSheet, View, ScrollView } from "react-native";
 import { GlobalStyles } from "../constants/styles";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Ionicons } from "@expo/vector-icons";
 
 import HomeHeader from "../components/Home/HomeHeader";
 import UserInfoSummary from "../components/Home/UserInfoSummary";
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
     marginTop: 32,
   },
   transactionsHeaderLabel: {
-    color: "#C1B9F9",
+    color: GlobalStyles.colors.secondaryLight,
     fontSize: 13,
     fontWeight: "bold",
   },

@@ -36,7 +36,11 @@ const styles = StyleSheet.create({
   budgetsSection: {
     marginTop: 32,
   },
-  budgetsHeaderLabel: { color: "#C1B9F9", fontSize: 13, fontWeight: "bold" },
+  budgetsHeaderLabel: {
+    color: GlobalStyles.colors.secondaryLight,
+    fontSize: 13,
+    fontWeight: "bold",
+  },
   budgetsCard: {
     padding: 24,
     marginTop: 16,

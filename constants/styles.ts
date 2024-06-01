@@ -6,5 +6,6 @@ export const GlobalStyles = {
     primaryLight: "#432DEC",
 
     secondary: "#978AF4",
+    secondaryLight: "#C1B9F9",
   },
 };
