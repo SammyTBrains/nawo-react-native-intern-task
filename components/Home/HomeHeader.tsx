@@ -16,14 +16,14 @@ const HomeHeader = () => {
         <View style={styles.iconBG}>
           <Ionicons
             name="notifications-outline"
-            color={GlobalStyles.colors.purple}
+            color={GlobalStyles.colors.secondary}
             size={24}
           />
         </View>
         <View style={styles.iconBG}>
           <Ionicons
             name="search-outline"
-            color={GlobalStyles.colors.purple}
+            color={GlobalStyles.colors.secondary}
             size={24}
           />
         </View>

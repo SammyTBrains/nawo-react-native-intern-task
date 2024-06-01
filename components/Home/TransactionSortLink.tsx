@@ -1,7 +1,8 @@
 import { Text, StyleSheet, View } from "react-native";
 
 import { GlobalStyles } from "../../constants/styles";
-import { ArrowSVG, TransactionLinkLogo } from "../../components/svgs";
+import { TransactionLinkLogo } from "../../components/svgs";
+import ArrowButton from "../UI/ArrowButton";
 
 const TransactionSortLink = () => {
   return (
@@ -19,9 +20,7 @@ const TransactionSortLink = () => {
           </Text>
         </View>
       </View>
-      <View style={styles.arrowLinkSVGContainer}>
-        <ArrowSVG />
-      </View>
+      <ArrowButton />
     </View>
   );
 };
@@ -50,13 +49,5 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-  },
-  arrowLinkSVGContainer: {
-    width: 30,
-    height: 30,
-    borderRadius: 30,
-    backgroundColor: "#2310B2",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });

@@ -3,6 +3,8 @@ export const GlobalStyles = {
     primary: "#2C14DD",
     primaryDarker: "#2812C9",
     primaryDeepDark: "#210FA4",
-    purple: "#978AF4",
+    primaryLight: "#432DEC",
+
+    secondary: "#978AF4",
   },
 };
