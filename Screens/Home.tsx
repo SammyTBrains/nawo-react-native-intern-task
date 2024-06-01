@@ -18,15 +18,17 @@ const Home = () => {
         <View style={styles.budgetsSection}>
           <Text style={styles.budgetsHeaderLabel}>My Budgets</Text>
           <View style={styles.budgetsCard}>
-            <View style={styles.budgetCardsTopRow}>
-              <Text
-                style={{ color: "white", fontSize: 12, fontWeight: "medium" }}
-              >
-                You have
+            <View style={styles.budgetsCardTopSection}>
+              <View style={styles.budgetCardsTopRow}>
+                <Text style={styles.budgetsCardTopSectionText}>You have</Text>
+                <ArrowButton
+                  style={{ height: 24, width: 24, borderRadius: 24 }}
+                />
+              </View>
+              <Text style={styles.budgetsCardTopSectionPrice}>N29,880</Text>
+              <Text style={styles.budgetsCardTopSectionText}>
+                Left out of N80,888 budgeted
               </Text>
-              <ArrowButton
-                style={{ height: 24, width: 24, borderRadius: 24 }}
-              />
             </View>
           </View>
         </View>
@@ -52,6 +54,17 @@ const styles = StyleSheet.create({
     marginTop: 16,
     backgroundColor: GlobalStyles.colors.primaryLight,
     borderRadius: 24,
+  },
+  budgetsCardTopSection: { gap: 16 },
+  budgetsCardTopSectionText: {
+    color: "white",
+    fontSize: 12,
+    fontWeight: "medium",
+  },
+  budgetsCardTopSectionPrice: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "bold",
   },
   budgetCardsTopRow: {
     flexDirection: "row",
