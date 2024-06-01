@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, Image, ScrollView } from "react-native";
+import { Text, StyleSheet, View, ScrollView } from "react-native";
 import { GlobalStyles } from "../constants/styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
@@ -8,6 +8,7 @@ import UserInfoSummary from "../components/Home/UserInfoSummary";
 import TransactionSortLink from "../components/Home/TransactionSortLink";
 import BudgetsSection from "../components/Home/BudgetsSection";
 import ArrowButton from "../components/UI/ArrowButton";
+import TransctionListItem from "../components/Home/TransctionListItem";
 
 const Home = () => {
   return (
@@ -28,20 +29,24 @@ const Home = () => {
                 style={{ height: 24, width: 24, borderRadius: 24 }}
               />
             </View>
-            <View>
-              <View
-                style={{
-                  backgroundColor: "#EEF2F8",
-                  height: 36,
-                  width: 36,
-                  borderRadius: 36,
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Text>J</Text>
-              </View>
-            </View>
+            <TransctionListItem
+              name="John Ogaga"
+              nameLabel="J"
+              bankDetails="Zenith Bank 12:03 AM"
+              amount="+N20,983"
+            />
+            <TransctionListItem
+              name="Habib Yogurt"
+              nameLabel="H"
+              bankDetails="GT-Bank 12:03 AM"
+              amount="-N20,983"
+            />
+            <TransctionListItem
+              name="Kane Ritchie"
+              nameLabel="K"
+              bankDetails="Kuda Bank 12:03 AM"
+              amount="-N20,000"
+            />
           </View>
         </View>
       </ScrollView>
