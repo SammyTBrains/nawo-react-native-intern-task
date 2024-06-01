@@ -7,6 +7,7 @@ import HomeHeader from "../components/Home/HomeHeader";
 import UserInfoSummary from "../components/Home/UserInfoSummary";
 import TransactionSortLink from "../components/Home/TransactionSortLink";
 import ArrowButton from "../components/UI/ArrowButton";
+import { ProgressBarSVG } from "../components/svgs";
 
 const Home = () => {
   return (
@@ -20,16 +21,22 @@ const Home = () => {
           <View style={styles.budgetsCard}>
             <View style={styles.budgetsCardTopSection}>
               <View style={styles.budgetCardsTopRow}>
-                <Text style={styles.budgetsCardTopSectionText}>You have</Text>
+                <Text style={styles.budgetsCardText}>You have</Text>
                 <ArrowButton
                   style={{ height: 24, width: 24, borderRadius: 24 }}
                 />
               </View>
               <Text style={styles.budgetsCardTopSectionPrice}>N29,880</Text>
-              <Text style={styles.budgetsCardTopSectionText}>
+              <Text style={styles.budgetsCardText}>
                 Left out of N80,888 budgeted
               </Text>
             </View>
+            <View style={{ marginVertical: 32 }}>
+              <ProgressBarSVG />
+            </View>
+            <Text style={styles.budgetsCardText}>
+              😱 Sapa go soon catch you bros, calm down!!
+            </Text>
           </View>
         </View>
       </ScrollView>
@@ -56,7 +63,7 @@ const styles = StyleSheet.create({
     borderRadius: 24,
   },
   budgetsCardTopSection: { gap: 16 },
-  budgetsCardTopSectionText: {
+  budgetsCardText: {
     color: "white",
     fontSize: 12,
     fontWeight: "medium",
