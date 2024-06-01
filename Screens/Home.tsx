@@ -19,25 +19,28 @@ const Home = () => {
           </View>
           <View style={{ marginVertical: 16, gap: 16 }}>
             <View style={{ gap: 8 }}>
-              <Text
-                style={{ textAlign: "center", color: "white", fontSize: 11 }}
-              >
+              <Text style={styles.userSummaryTopText}>
                 Your available balance is
               </Text>
-              <Text
-                style={{
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontWeight: "bold",
-                  color: "white",
-                }}
-              >
-                N20,983
-              </Text>
+              <Text style={styles.userSummaryTopPrice}>N20,983</Text>
             </View>
-            <Text style={{ textAlign: "center", color: "white", fontSize: 11 }}>
+            <Text style={styles.userSummaryTopText}>
               By this time last month, you spent slightly higher (N22,719)
             </Text>
+          </View>
+        </View>
+        <View style={styles.userSummaryBankDetails}>
+          <View style={styles.userSummaryBankDetailsRow}>
+            <Text style={styles.bankDetailsText}>Kuda Bank</Text>
+            <Text style={styles.bankDetailsText}>N12,000.00</Text>
+          </View>
+          <View style={styles.userSummaryBankDetailsRow}>
+            <Text style={styles.bankDetailsText}>GT Bank</Text>
+            <Text style={styles.bankDetailsText}>N950.00</Text>
+          </View>
+          <View style={styles.userSummaryBankDetailsRow}>
+            <Text style={styles.bankDetailsText}>PiggyVest</Text>
+            <Text style={styles.bankDetailsText}>N1,050.00</Text>
           </View>
         </View>
       </View>
@@ -72,5 +75,27 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 52,
   },
-  userSummaryT: {},
+  userSummaryTopText: { textAlign: "center", color: "white", fontSize: 11 },
+  userSummaryTopPrice: {
+    textAlign: "center",
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "white",
+  },
+  userSummaryBankDetails: {
+    width: "100%",
+    marginTop: 24,
+    gap: 16,
+    marginBottom: 8,
+  },
+  userSummaryBankDetailsRow: {
+    flexDirection: "row",
+    width: "100%",
+    justifyContent: "space-between",
+  },
+  bankDetailsText: {
+    color: "white",
+    fontSize: 12,
+    fontWeight: "medium",
+  },
 });
