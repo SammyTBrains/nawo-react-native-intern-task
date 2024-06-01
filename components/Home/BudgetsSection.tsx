@@ -10,7 +10,7 @@ const BudgetsSection = () => {
       <Text style={styles.budgetsHeaderLabel}>My Budgets</Text>
       <View style={styles.budgetsCard}>
         <View style={styles.budgetsCardTopSection}>
-          <View style={styles.budgetCardsTopRow}>
+          <View style={styles.budgetsCardsTopRow}>
             <Text style={styles.budgetsCardText}>You have</Text>
             <ArrowButton style={{ height: 24, width: 24, borderRadius: 24 }} />
           </View>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
-  budgetCardsTopRow: {
+  budgetsCardsTopRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
