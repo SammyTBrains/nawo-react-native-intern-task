@@ -1,15 +1,13 @@
 import { Text, StyleSheet, View, Image } from "react-native";
 import { GlobalStyles } from "../../constants/styles";
+import { UserDummySVG } from "../svgs";
 
 const UserInfoSummary = () => {
   return (
     <View style={styles.userSummary}>
       <View style={styles.userSummaryTopDetails}>
         <View style={styles.userImageBG}>
-          <Image
-            source={require("../../assets/images/userDummyImage.png")}
-            style={{ width: 52, height: 52 }}
-          />
+          <UserDummySVG />
         </View>
         <View style={{ marginVertical: 16, gap: 16 }}>
           <View style={{ gap: 8 }}>
