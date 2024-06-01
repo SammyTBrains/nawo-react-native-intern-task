@@ -20,10 +20,10 @@ export default function App() {
       <NavigationContainer>
         <BottomTabs.Navigator
           screenOptions={{
-            headerStyle: { backgroundColor: GlobalStyles.colors.primary500 },
-            headerTintColor: "white",
+            headerShown: false,
             tabBarStyle: { backgroundColor: GlobalStyles.colors.primary500 },
-            tabBarActiveTintColor: GlobalStyles.colors.accent500,
+            tabBarShowLabel: false,
+            tabBarActiveTintColor: "white",
             tabBarInactiveTintColor: "white",
           }}
         >
@@ -31,8 +31,12 @@ export default function App() {
             name="Home"
             component={Home}
             options={{
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="home" color={color} size={size} />
+              tabBarIcon: ({ color, size, focused }) => (
+                <Ionicons
+                  name={focused ? "home" : "home-outline"}
+                  color={color}
+                  size={size}
+                />
               ),
             }}
           />
@@ -40,8 +44,12 @@ export default function App() {
             name="Budgets"
             component={Budgets}
             options={{
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="pie-chart-outline" color={color} size={size} />
+              tabBarIcon: ({ color, size, focused }) => (
+                <Ionicons
+                  name={focused ? "pie-chart" : "pie-chart-outline"}
+                  color={color}
+                  size={size}
+                />
               ),
             }}
           />
@@ -49,8 +57,12 @@ export default function App() {
             name="Insights"
             component={Insights}
             options={{
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="bar-chart-outline" color={color} size={size} />
+              tabBarIcon: ({ color, size, focused }) => (
+                <Ionicons
+                  name={focused ? "bar-chart" : "bar-chart-outline"}
+                  color={color}
+                  size={size}
+                />
               ),
             }}
           />
@@ -58,8 +70,12 @@ export default function App() {
             name="Profile"
             component={Profile}
             options={{
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="person-outline" color={color} size={size} />
+              tabBarIcon: ({ color, size, focused }) => (
+                <Ionicons
+                  name={focused ? "person" : "person-outline"}
+                  color={color}
+                  size={size}
+                />
               ),
             }}
           />
