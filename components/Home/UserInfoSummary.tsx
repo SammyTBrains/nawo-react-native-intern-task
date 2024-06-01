@@ -1,4 +1,5 @@
 import { Text, StyleSheet, View, Image } from "react-native";
+import { GlobalStyles } from "../../constants/styles";
 
 const UserInfoSummary = () => {
   return (
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
   userSummary: {
     padding: 24,
     marginTop: 16,
-    backgroundColor: "#210FA4",
+    backgroundColor: GlobalStyles.colors.primaryDeepDark,
     borderRadius: 24,
     alignItems: "center",
   },
