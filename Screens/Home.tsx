@@ -28,6 +28,20 @@ const Home = () => {
                 style={{ height: 24, width: 24, borderRadius: 24 }}
               />
             </View>
+            <View>
+              <View
+                style={{
+                  backgroundColor: "#EEF2F8",
+                  height: 36,
+                  width: 36,
+                  borderRadius: 36,
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text>J</Text>
+              </View>
+            </View>
           </View>
         </View>
       </ScrollView>
