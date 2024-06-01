@@ -10,13 +10,7 @@ const TransactionSortLink = () => {
         <View style={styles.transacLinkImageContainer}>
           <TransactionLinkLogo />
         </View>
-        <View
-          style={{
-            justifyContent: "space-between",
-            width: 162,
-            gap: 8,
-          }}
-        >
+        <View style={styles.transactionSortLinkLeft}>
           <Text style={{ color: "white", fontSize: 14, fontWeight: "bold" }}>
             Sort your transactions
           </Text>
@@ -25,16 +19,7 @@ const TransactionSortLink = () => {
           </Text>
         </View>
       </View>
-      <View
-        style={{
-          width: 30,
-          height: 30,
-          borderRadius: 30,
-          backgroundColor: "#2310B2",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <View style={styles.arrowLinkSVGContainer}>
         <ArrowSVG />
       </View>
     </View>
@@ -53,6 +38,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
+  transactionSortLinkLeft: {
+    justifyContent: "space-between",
+    width: 162,
+    gap: 8,
+  },
   transacLinkImageContainer: {
     width: 40,
     height: 40,
@@ -60,5 +50,13 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
+  },
+  arrowLinkSVGContainer: {
+    width: 30,
+    height: 30,
+    borderRadius: 30,
+    backgroundColor: "#2310B2",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
